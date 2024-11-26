@@ -30,7 +30,7 @@ export const projects = [
     technologies: 'React Native, Three.js, Typescript, Tailwind, Framer Motin, Email.js',
     http: 'expo.dev/@takeree',
     github: 'https://github.com/alexandrkadai/hotelsapp',
-    src: 'threejs.png',
+    src: 'airbnb.png',
   },
   {
     id: 4,

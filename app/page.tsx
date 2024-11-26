@@ -1,6 +1,4 @@
 import { projects } from '@/constants/projects';
-import eco from '../assets/EcomSne.png';
-import Image from 'next/image';
 export default function Home() {
   return (
     <div className="p-10 md:p-15 lg:p-20 xl:p-25">
