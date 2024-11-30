@@ -15,7 +15,7 @@ export default function Header() {
       </div>
       <div className="text-center uppercase text-purple-700">Front-end Developer React</div>
       <div className="text-center">
-      <PDFDownloadButton fileName="Kadai_Alex_CV.pdf" fileUrl="/api/download-pdf" />
+    <a className="block m-auto w-[250px] h-[50px] bg-purple-700 p-2 mt-5 uppercase rounded-xl font-bold tracking-wider hover:bg-purple-500" href="/Kadai_Alex_CV.pdf" download >Download My CV</a>
       </div>
     </div>
   );
