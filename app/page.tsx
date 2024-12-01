@@ -7,7 +7,7 @@ export default function Home() {
       </h1>
       {projects.map((item) => (
         <div
-          className="mt-5 flex flex-col-reverse items-center justify-center lg:flex-row"
+          className="mt-5 pb-5 flex flex-col-reverse items-center lg:items-start justify-center lg:flex-row"
           key={item.id}
         >
           <img
@@ -17,7 +17,7 @@ export default function Home() {
             alt="projectImage"
             className="mt-5 lg:mt-0"
           />
-          <div className="lg:ml-5 mt-5 flex w-[333px] flex-col gap-5 rounded-md border-2 border-black bg-purple-400 p-2 text-black lg:mt-0 lg:w-auto">
+          <div className="lg:ml-5 mt-5 flex w-[333px] flex-col gap-5 rounded-md border-2 border-black bg-purple-400 p-2 text-black lg:mt-0 lg:w-[450px]">
             <h2 className="text-2xl font-bold">{item.name}</h2>
             <a href={item.github}>Github Link</a>
             <a href={item.http}>{item.http}</a>
