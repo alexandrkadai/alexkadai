@@ -1,4 +1,12 @@
 export const projects = [
+  {id: 101,
+    name: 'Zentry Web Site',
+    technologies:
+      'React, Typescript, GSAP, Tailwind',
+    http: 'https://zentry-gamma.vercel.app/',
+    github: 'https://github.com/alexandrkadai/zentry',
+    src: 'zentry.png',
+  },
   {
     id: 0,
     name: 'Eccomerce Sheaker Shop',
