@@ -1,8 +1,36 @@
+'use client';
+
 import { projects } from '@/constants/projects';
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
+  const titleRef = useRef(null);
+
+  useGSAP(() => {
+    let tl = gsap.timeline({repeat: -1, repeatDelay: 0});
+    tl.to(titleRef.current, {
+      x: 100,
+      ease: 'power1.inOut',
+      duration: 2,
+    }).to(titleRef.current,{
+      x: -100,
+      ease: 'power1.inOut',
+      duration: 2,
+    }).to(titleRef.current,{
+      x: 0,
+      ease: 'power1.inOut',
+      duration: 2,
+    })
+  });
+
   return (
     <div className="md:p-15 xl:p-25 p-0 lg:p-20">
-      <h1 className="mt-10 text-center text-2xl font-bold uppercase tracking-widest text-black">
+      <h1 ref={titleRef} className="animated-word mt-10 text-center text-3xl font-bold uppercase tracking-widest text-black">
         Projects
       </h1>
       {projects.map((item) => (
