@@ -12,7 +12,7 @@ export default function Home() {
   const titleRef = useRef(null);
 
   useGSAP(() => {
-    let tl = gsap.timeline({repeat: -1, repeatDelay: 0});
+    const tl = gsap.timeline({repeat: -1, repeatDelay: 0});
     tl.to(titleRef.current, {
       x: 100,
       ease: 'power1.inOut',
