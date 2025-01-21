@@ -11,7 +11,7 @@ export const projects = [
     id: 0,
     name: 'Eccomerce Sheaker Shop',
     technologies:
-      'Next.js, React, Redis, Typescript, Prisma, Zod, Conform, Recharts PostgresSql, Stripe, ShadCn,  Tailwind',
+      'Next.js, React, Redis Upstash, Typescript, Prisma, Zod, Conform, Recharts, PostgresSql, Stripe, ShadCn, Tailwind',
     http: 'https://ecommsneaker.vercel.app/',
     github: 'https://github.com/alexandrkadai/ecommsneaker',
     src: 'EcomSne.png',
@@ -19,7 +19,7 @@ export const projects = [
   {
     id: 1,
     name: 'School dashboard',
-    technologies: 'Next.js, React, Typescript, Recharts, Zod, React-Hook-Form ShadCn,  Tailwind',
+    technologies: 'Next.js, React, Typescript, Recharts, Zod, React-Hook-Form, ShadCn, Tailwind',
     http: 'https://schooldashboard-tau.vercel.app/',
     github: 'https://github.com/alexandrkadai/school',
     src: 'school.png',
@@ -27,7 +27,7 @@ export const projects = [
   {
     id: 2,
     name: 'RowdyIs online shop',
-    technologies: 'React, Redux, Typescript, Framer Motion, Css modules',
+    technologies: 'React, Redux, Typescript, Framer Motion, Css Modules',
     http: 'https://onlineshop-bice.vercel.app/',
     github: 'https://github.com/alexandrkadai/onlineshop',
     src: 'rowdy.png',
@@ -35,7 +35,7 @@ export const projects = [
   {
     id: 3,
     name: 'PonPon online shop',
-    technologies: 'React, Redux Saga Thunk, Typescript, Stripe, Firebase, Css modules',
+    technologies: 'React, Redux Saga/Thunk, Typescript, Stripe, Firebase, Css Modules',
     http: 'https://incomparable-jalebi-5a29d8.netlify.app/',
     github: 'https://github.com/alexandrkadai/PonPon',
     src: 'ponpon.png',
@@ -43,7 +43,7 @@ export const projects = [
   {
     id: 4,
     name: 'AirBnb Clone React Native',
-    technologies: 'React Native, Three.js, Typescript, Tailwind, Framer Motin, Email.js',
+    technologies: 'React Native EXPO, React Native Maps, Typescript, Tailwind, Framer Motion, Clerk',
     http: 'expo.dev/@takeree',
     github: 'https://github.com/alexandrkadai/hotelsapp',
     src: 'airbnb.png',
@@ -51,7 +51,7 @@ export const projects = [
   {
     id: 5,
     name: 'Three.js Pet Project',
-    technologies: 'React, Three.js, Tailwind, Framer Motin, Email.js',
+    technologies: 'React, Three.js, Tailwind, Framer Motion, Email.js',
     http: 'https://portfolio-lyart-xi-88.vercel.app/',
     github: 'https://github.com/alexandrkadai/portfolio',
     src: 'threejs.png',
