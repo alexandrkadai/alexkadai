@@ -32,7 +32,7 @@ export default function Home() {
   });
 
   return (
-    <div className="mx-auto w-[350px] md:w-[50vw] pb-10">
+    <div className="mx-auto w-[350px] md:w-[50vw] pb-10 ">
       <h1
         ref={titleRef}
         className="animated-word mt-3 text-center text-3xl font-bold uppercase tracking-widest text-purple-600"
