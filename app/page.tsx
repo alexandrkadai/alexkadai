@@ -32,7 +32,7 @@ export default function Home() {
   });
 
   return (
-    <div className="md:px-15 xl:px-25 p-0 lg:px-20">
+    <div className="mx-auto w-[350px] md:w-[50vw] pb-10">
       <h1
         ref={titleRef}
         className="animated-word mt-3 text-center text-3xl font-bold uppercase tracking-widest text-purple-600"
@@ -41,18 +41,18 @@ export default function Home() {
       </h1>
       {projects.map((item) => (
         <div
-          className="mt-5 mx-auto flex flex-col-reverse items-center justify-center pb-5 lg:flex-row lg:items-start w-[50vw]"
+          className="mx-auto mt-10 flex w-full flex-col items-center justify-center border-b-4 border-purple-700 pb-5 lg:items-start"
           key={item.id}
         >
+          <h2 className="text-3xl font-bold text-purple-700">{item.name}</h2>
           <img
             src={item.src}
-            width={200}
             height={400}
             alt="projectImage"
-            className="mt-5 object-cover lg:mt-0"
+            className="mx-auto  w-[333px] object-cover md:w-full lg:mt-0"
           />
-          <div className="mt-5 flex w-[333px] flex-col gap-5 rounded-md border-2 border-purple-700 bg-purple-400 p-2 text-purple-900 lg:ml-5 lg:mt-0 lg:w-[450px]">
-            <h2 className="text-2xl font-bold">{item.name}</h2>
+          <div className="mx-auto mt-5 flex w-[333px] flex-col gap-5 rounded-md border-2 border-purple-700 bg-purple-400 p-2 text-purple-900 lg:w-full">
+            
             <a
               className="flex flex-row gap-2 font-bold underline"
               href={item.github}
