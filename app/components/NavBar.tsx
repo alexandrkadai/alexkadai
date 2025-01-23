@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    <div className="w-full mt-5 flex gap-5 items-center justify-center text-purple-500 font-bold uppercase ">
-        <Link href='/'>Main</Link>
-        <Link href='/'>CV</Link>
-        <Link href='/'>Projects</Link>
-        <Link href='/'>Contacs</Link>
+    <div className="mt-5 flex w-full items-center justify-center gap-5 font-bold uppercase text-purple-500">
+      <Link href="/">Main</Link>
+      <Link href="/">CV</Link>
+      <Link href="/">Projects</Link>
+      <Link href="/">Contacs</Link>
     </div>
-  )
+  );
 }

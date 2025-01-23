@@ -1,8 +1,8 @@
 export const projects = [
-  {id: 101,
+  {
+    id: 101,
     name: 'Zentry Web Site',
-    technologies:
-      'React, Typescript, GSAP, Tailwind',
+    technologies: 'React, Typescript, GSAP, Tailwind',
     http: 'https://zentry-gamma.vercel.app/',
     github: 'https://github.com/alexandrkadai/zentry',
     src: 'zentry.png',
@@ -19,7 +19,8 @@ export const projects = [
   {
     id: 1,
     name: 'School dashboard',
-    technologies: 'Next.js, React, Typescript, Recharts, Zod, React-Hook-Form, ShadCn, Tailwind',
+    technologies:
+      'Next.js, React, Typescript, Recharts, Zod, React-Hook-Form, ShadCn, Tailwind',
     http: 'https://schooldashboard-tau.vercel.app/',
     github: 'https://github.com/alexandrkadai/school',
     src: 'school.png',
@@ -35,7 +36,8 @@ export const projects = [
   {
     id: 3,
     name: 'PonPon online shop',
-    technologies: 'React, Redux Saga/Thunk, Typescript, Stripe, Firebase, Css Modules',
+    technologies:
+      'React, Redux Saga/Thunk, Typescript, Stripe, Firebase, Css Modules',
     http: 'https://incomparable-jalebi-5a29d8.netlify.app/',
     github: 'https://github.com/alexandrkadai/PonPon',
     src: 'ponpon.png',
@@ -43,7 +45,8 @@ export const projects = [
   {
     id: 4,
     name: 'AirBnb Clone React Native',
-    technologies: 'React Native EXPO, React Native Maps, Typescript, Tailwind, Framer Motion, Clerk',
+    technologies:
+      'React Native EXPO, React Native Maps, Typescript, Tailwind, Framer Motion, Clerk',
     http: 'expo.dev/@takeree',
     github: 'https://github.com/alexandrkadai/hotelsapp',
     src: 'airbnb.png',

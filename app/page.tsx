@@ -32,7 +32,7 @@ export default function Home() {
   });
 
   return (
-    <div className="mx-auto w-[350px] md:w-[50vw] pb-10 ">
+    <div className="mx-auto w-[350px] pb-10 md:w-[50vw]">
       <h1
         ref={titleRef}
         className="animated-word mt-3 text-center text-3xl font-bold uppercase tracking-widest text-purple-600"
@@ -49,10 +49,9 @@ export default function Home() {
             src={item.src}
             height={400}
             alt="projectImage"
-            className="mx-auto  w-[333px] object-cover md:w-full lg:mt-0"
+            className="mx-auto w-[333px] object-cover md:w-full lg:mt-0"
           />
           <div className="mx-auto mt-5 flex w-[333px] flex-col gap-5 rounded-md border-2 border-purple-700 bg-purple-400 p-2 text-purple-900 lg:w-full">
-            
             <a
               className="flex flex-row gap-2 font-bold underline"
               href={item.github}
