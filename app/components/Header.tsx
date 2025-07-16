@@ -22,8 +22,8 @@ export default function Header() {
       </div>
       <div className="text-center">
         <a
-          className="m-auto mt-5 block h-[50px] w-[350px] rounded-md bg-purple-700 p-2 font-bold uppercase tracking-wider hover:bg-purple-500 md:w-[50vw]"
-          href="/Kadai_Alex_FE_CV.pdf"
+          className="m-auto mt-5 block h-[50px] w-[350px] rounded-md bg-purple-700 p-3 font-bold uppercase tracking-wider hover:bg-purple-500 md:w-[50vw]"
+          href="/Alex_Kadai_FE_CV.pdf"
           download
         >
           Download My CV
