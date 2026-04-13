@@ -3,14 +3,15 @@
 import { projects } from '@/constants/projects';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowUp, Github, ExternalLink } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const titleRef = useRef(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -19,6 +20,26 @@ export default function Home() {
       { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }
     );
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 pb-20">
@@ -97,6 +118,17 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-purple-500 text-white shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-500/50 ${
+          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
+        }`}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={24} />
+      </button>
     </div>
   );
 }
