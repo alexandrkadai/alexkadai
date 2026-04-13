@@ -16,8 +16,41 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Alex Kadai',
-  description: 'Alex Kadai projects page',
+  title: 'Alex Kadai - Frontend Developer React',
+  description: 'Professional portfolio of Alex Kadai, a skilled Frontend Developer specializing in React, Next.js, and modern web technologies. View my projects and get in touch.',
+  keywords: ['Alex Kadai', 'Frontend Developer', 'React Developer', 'Web Developer', 'JavaScript', 'TypeScript', 'Next.js', 'Portfolio'],
+  authors: [{ name: 'Alex Kadai' }],
+  creator: 'Alex Kadai',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://alexkadai.com',
+    title: 'Alex Kadai - Frontend Developer React',
+    description: 'Professional portfolio of Alex Kadai, a skilled Frontend Developer specializing in React, Next.js, and modern web technologies.',
+    siteName: 'Alex Kadai Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Alex Kadai - Frontend Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alex Kadai - Frontend Developer React',
+    description: 'Professional portfolio of Alex Kadai, a skilled Frontend Developer specializing in React and modern web technologies.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({
