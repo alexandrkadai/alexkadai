@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,64 +13,90 @@ export default function Home() {
   const titleRef = useRef(null);
 
   useGSAP(() => {
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
-    tl.to(titleRef.current, {
-      x: 100,
-      ease: 'power1.inOut',
-      duration: 2,
-    })
-      .to(titleRef.current, {
-        x: -100,
-        ease: 'power1.inOut',
-        duration: 2,
-      })
-      .to(titleRef.current, {
-        x: 0,
-        ease: 'power1.inOut',
-        duration: 2,
-      });
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: -20 },
+      { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }
+    );
   });
 
   return (
-    <div className="mx-auto w-[350px] pb-10 md:w-[50vw] overflow-hidden">
-      <h1
-        ref={titleRef}
-        className="animated-word mt-3 text-center text-3xl font-bold uppercase tracking-widest text-purple-600"
-      >
-        Projects
-      </h1>
-      {projects.map((item) => (
-        <div
-          className="mx-auto mt-10 flex w-full flex-col items-center justify-center border-b-4 border-purple-700 pb-5 lg:items-start"
-          key={item.id}
+    <div className="mx-auto max-w-6xl px-4 py-16 pb-20">
+      {/* Section Title */}
+      <div className="mb-16 text-center">
+        <h1
+          ref={titleRef}
+          className="text-4xl md:text-5xl font-bold tracking-tight"
         >
-          <h2 className="text-3xl font-bold text-purple-700">{item.name}</h2>
-          <img
-            src={item.src}
-            height={400}
-            alt="projectImage"
-            className="mx-auto w-[333px] object-cover md:w-full lg:mt-0"
-          />
-          <div className="mx-auto mt-5 flex w-[333px] flex-col gap-5 rounded-md border-2 border-purple-700 bg-purple-400 p-2 text-purple-900 lg:w-full">
-            <a
-              className="flex flex-row gap-2 font-bold underline"
-              href={item.github}
-            >
-              Github Link <ArrowUpRight size={20} />
-            </a>
-            <div className="">
-              <p className="text-xl font-bold">Project Online :</p>
-              <a className="font-bold underline" href={item.http}>
-                {item.http}
-              </a>
-            </div>
-            <div className="">
-              <p className="text-xl font-bold">Technologies:</p>
-              <p className="">{item.technologies}</p>
+          <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
+            Featured Projects
+          </span>
+        </h1>
+        <div className="mx-auto mt-4 h-1 w-24 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="grid gap-8">
+        {projects.map((item) => (
+          <div
+            className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-black transition-all duration-500 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10"
+            key={item.id}
+          >
+            {/* Project Content */}
+            <div className="grid md:grid-cols-2 gap-6 p-6 md:p-8">
+              {/* Image Section */}
+              <div className="relative overflow-hidden rounded-xl border border-zinc-800 bg-black">
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Info Section */}
+              <div className="flex flex-col justify-between space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-4">
+                    {item.name}
+                  </h2>
+                  
+                  {/* Technologies */}
+                  <div className="mb-6">
+                    <p className="text-sm uppercase tracking-wider text-zinc-400 mb-2">
+                      Technologies
+                    </p>
+                    <p className="text-zinc-300 leading-relaxed">
+                      {item.technologies}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    className="flex items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800/50 px-6 py-3 font-semibold text-white transition-all duration-300 hover:border-purple-500 hover:bg-zinc-800 hover:shadow-lg hover:shadow-purple-500/20"
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={18} />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg shadow-purple-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/40 hover:scale-105"
+                    href={item.http}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={18} />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

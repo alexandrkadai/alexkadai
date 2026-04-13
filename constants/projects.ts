@@ -1,4 +1,12 @@
 export const projects = [
+   {
+    id: 102,
+    name: 'KyivCity Grillbar Crm for Reservation Managment',
+    technologies: 'React, Next.js, Supabase, PostgreSQL, Smtp, Typescript, Tailwind',
+    http: 'https://grillbar.vercel.app/',
+    github: 'https://github.com/alexandrkadai/grillbar',
+    src: 'GrilbarCrm.png',
+  },
   {
     id: 101,
     name: 'Zentry Web Site',
