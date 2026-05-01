@@ -27,6 +27,13 @@ export default function NavBar() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link 
+            href="/pricing" 
+            className="text-zinc-400 transition-colors duration-300 hover:text-purple-400 relative group"
+          >
+            Pricing
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link 
             href="/" 
             className="text-zinc-400 transition-colors duration-300 hover:text-purple-400 relative group"
           >
