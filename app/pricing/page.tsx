@@ -120,7 +120,7 @@ export default function PricingPage() {
       >
         {pricingTiers.map((tier, index) => (
           <div
-            key={tier.name}
+            key={index}
             className={`pricing-card relative rounded-2xl p-8 border-2 transition-all duration-300 hover:scale-105 ${
               tier.popular
                 ? 'border-purple-500 bg-gradient-to-br from-purple-900/20 to-transparent'
@@ -236,7 +236,7 @@ export default function PricingPage() {
             href="mailto:alex@alexkadai.com"
             className="text-purple-500 hover:text-purple-400 underline"
           >
-            Let's talk
+            Let&apos;s talk
           </a>
           .
         </p>
