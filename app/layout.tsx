@@ -24,13 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://alexkadai.com',
+    url: 'https://alexkadai.online',
     title: 'Alex Kadai - Frontend Developer React',
     description: 'Professional portfolio of Alex Kadai, a skilled Frontend Developer specializing in React, Next.js, and modern web technologies.',
     siteName: 'Alex Kadai Portfolio',
     images: [
       {
-        url: '/metaImage.png',
+        url: 'https://alexkadai.online/metaImage.png',
         width: 1200,
         height: 630,
         alt: 'Alex Kadai - Frontend Developer',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Alex Kadai - Frontend Developer React',
     description: 'Professional portfolio of Alex Kadai, a skilled Frontend Developer specializing in React and modern web technologies.',
-    images: ['/metaImage.png'],
+    images: ['https://alexkadai.online/metaImage.png'],
   },
   robots: {
     index: true,
