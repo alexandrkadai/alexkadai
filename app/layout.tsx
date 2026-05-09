@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'Alex Kadai Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/metaImage.png',
         width: 1200,
         height: 630,
         alt: 'Alex Kadai - Frontend Developer',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Alex Kadai - Frontend Developer React',
     description: 'Professional portfolio of Alex Kadai, a skilled Frontend Developer specializing in React and modern web technologies.',
-    images: ['/og-image.jpg'],
+    images: ['/metaImage.png'],
   },
   robots: {
     index: true,
