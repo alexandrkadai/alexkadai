@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Header() {
   return (
     <div className="w-full px-4 py-16">
@@ -5,10 +8,12 @@ export default function Header() {
         <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-black p-8 shadow-2xl md:p-12">
           <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-purple-600 via-purple-400 to-purple-600"></div>
 
-          <div className="space-y-6 text-center">
-            <div className="space-y-2">
+          <div className="flex flex-row items-center justify-center gap-6 space-y-6 text-center">
+            
+            <div className=" flex flex-col space-y-2">
+              <div>
               <p className="text-sm uppercase tracking-widest text-zinc-400">
-                Hello, I&apos;m
+                Hello, my name is
               </p>
               <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
                 <span className="bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
@@ -21,6 +26,17 @@ export default function Header() {
               <p className="border-b-2 border-purple-500 px-4 pb-2 text-xl font-medium text-white md:text-2xl">
                 Front-end Developer React
               </p>
+            </div>
+            </div>
+            <div className="flex justify-center mb-6">
+              <Image
+                src="/me1.jpg"
+                alt="Alex Kadai"
+                width={150}
+                height={150}
+                className="rounded-full border-4 border-purple-500 shadow-lg shadow-purple-500/50"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -66,7 +82,7 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 px-8 py-4 font-semibold uppercase tracking-wider text-white shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40"
             href="/Alex_Kadai_FE_CV.pdf"
@@ -74,6 +90,18 @@ export default function Header() {
           >
             Download My CV
           </a>
+          <Link
+            href="/pricing"
+            className="inline-flex items-center justify-center rounded-xl border-2 border-purple-500 px-8 py-4 font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-purple-500/10 hover:scale-105"
+          >
+            View Pricing
+          </Link>
+              <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-xl border-2 border-purple-500 px-8 py-4 font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-purple-500/10 hover:scale-105"
+          >
+            View Projects
+          </Link>
         </div>
       </div>
     </div>

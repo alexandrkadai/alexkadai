@@ -42,7 +42,7 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 pb-20">
+    <div className="mx-auto max-w-6xl px-4 py-16 pb-20" id="projects">
       {/* Section Title */}
       <div className="mb-16 text-center">
         <h1

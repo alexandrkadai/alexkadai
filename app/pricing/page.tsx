@@ -102,6 +102,9 @@ export default function PricingPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 pb-20">
+      {/* Navigation Buttons */}
+   
+      
       {/* Header Section */}
       <div className="mb-16 text-center" ref={titleRef}>
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
